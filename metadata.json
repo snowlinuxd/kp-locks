@@ -1,0 +1,6 @@
+{
+  "name": "KP LOCKS",
+  "description": "Premium landing page for KP LOCKS, traditional handmade Dindigul lock manufacturers providing 24/7 expert locksmith and secure key solutions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
