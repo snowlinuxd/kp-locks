@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { Volume2, VolumeX, Play, Pause, RefreshCw } from 'lucide-react';
+import { Volume2, VolumeX } from 'lucide-react';
 
 const AMBER_EMBERS = [
   { left: '12%', duration: '4.2s', delay: '0.5s', drift: '30px', size: '2px', bg: 'bg-orange-500' },
@@ -33,7 +33,6 @@ const POSTER_IMAGE = "https://images.unsplash.com/photo-1534224039826-c7a0eda0e6
 export default function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isMuted, setIsMuted] = useState(true);
-  const [isPlaying, setIsPlaying] = useState(true);
   const [hasVideoError, setHasVideoError] = useState(false);
   const [videoSrcIndex, setVideoSrcIndex] = useState(0);
 
@@ -43,26 +42,6 @@ export default function Hero() {
     if (videoRef.current) {
       videoRef.current.muted = !videoRef.current.muted;
       setIsMuted(videoRef.current.muted);
-    }
-  };
-
-  const togglePlay = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-        setIsPlaying(false);
-      } else {
-        videoRef.current.play().catch(() => {});
-        setIsPlaying(true);
-      }
-    }
-  };
-
-  const handleRestart = () => {
-    if (videoRef.current) {
-      videoRef.current.currentTime = 0;
-      videoRef.current.play().catch(() => {});
-      setIsPlaying(true);
     }
   };
 
@@ -82,7 +61,6 @@ export default function Hero() {
       videoRef.current.muted = true;
       videoRef.current.play()
         .then(() => {
-          setIsPlaying(true);
           setHasVideoError(false);
         })
         .catch((err) => {
@@ -133,7 +111,6 @@ export default function Hero() {
           playsInline
           onPlay={() => {
             setHasVideoError(false);
-            setIsPlaying(true);
           }}
           onError={handleVideoError}
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${hasVideoError ? 'opacity-30' : 'opacity-100'}`}
@@ -144,46 +121,18 @@ export default function Hero() {
         <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/50 to-transparent pointer-events-none z-10" />
       </div>
 
-      {/* Clean Minimalist Playback Controls HUD */}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-30 flex items-center gap-4 bg-black/75 border border-zinc-800/80 px-6 py-3.5 rounded-full backdrop-blur-md shadow-2xl">
-        <button
-          onClick={togglePlay}
-          className="hidden md:flex items-center justify-center p-2 rounded-full text-zinc-300 hover:text-[#D4AF37] hover:bg-zinc-800/55 transition-all cursor-pointer"
-          title={isPlaying ? "Pause Video" : "Play Video"}
-        >
-          {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5 fill-[#D4AF37]/10" />}
-        </button>
-
-        <span className="w-px h-5 bg-zinc-800" />
-
-        <button
-          onClick={toggleMute}
-          className="hidden md:flex items-center gap-2.5 px-3 py-1.5 rounded-full text-[#D4AF37] hover:text-white hover:bg-zinc-800/55 transition-all cursor-pointer text-xs font-mono font-bold uppercase tracking-widest"
-          title={isMuted ? "Unmute Sound" : "Mute Sound"}
-        >
-          {isMuted ? (
-            <>
-              <VolumeX className="w-5 h-5 text-red-400" />
-              <span className="text-red-400">Click to Unmute Sound</span>
-            </>
-          ) : (
-            <>
-              <Volume2 className="w-5 h-5 animate-pulse" />
-              <span className="text-emerald-400">Audio Playing</span>
-            </>
-          )}
-        </button>
-
-        <span className="w-px h-5 bg-zinc-800" />
-
-        <button
-          onClick={handleRestart}
-          className="hidden md:flex items-center justify-center p-2 rounded-full text-zinc-300 hover:text-[#D4AF37] hover:bg-zinc-800/55 transition-all cursor-pointer"
-          title="Restart Video from Beginning"
-        >
-          <RefreshCw className="w-4 h-4" />
-        </button>
-      </div>
+      {/* Speaker Mute/Unmute Button - Below CALL NOW CTA */}
+      <button
+        onClick={toggleMute}
+        className="absolute top-20 right-6 z-30 p-2 rounded-full bg-black/60 hover:bg-black/80 border border-zinc-800/80 text-zinc-300 hover:text-[#D4AF37] transition-all"
+        title={isMuted ? "Unmute Sound" : "Mute Sound"}
+      >
+        {isMuted ? (
+          <VolumeX className="w-4 h-4 text-red-400" />
+        ) : (
+          <Volume2 className="w-4 h-4 text-emerald-400 animate-pulse" />
+        )}
+      </button>
     </section>
   );
 }
