@@ -54,7 +54,7 @@ export default function LocksShowcase() {
       icon: Lock,
       keyType: "Hand-milled Symmetrical Brass Keys (Pair)",
       historicalNote: "Invented in the early 20th century to protect temple vaults and sovereign treasuries across southern India.",
-      image: "/public/KP Premium Brass Aldrop Lock.png"
+      image: "/KP Premium Brass Aldrop Lock.png"
     },
     {
       id: "shackle-fortress",
@@ -70,7 +70,7 @@ export default function LocksShowcase() {
       icon: ShieldCheck,
       keyType: "Laser-Cut Security Dimple Keys",
       historicalNote: "Commonly deployed in remote railway junction facilities and heavy industrial cargo lockers.",
-      image: "/public/KP Stainless Steel Mortise Lock.png"
+      image: "/KP Stainless Steel Mortise Lock.png"
     },
     {
       id: "decoy-puzzle",
@@ -86,7 +86,7 @@ export default function LocksShowcase() {
       icon: Sparkles,
       keyType: "Double-profile Fluted Barrel Key",
       historicalNote: "Handcrafted primarily for storing traditional heirloom jewelry and ancestral document chests.",
-      image: "/public/KP Traditional Dindigul Box Lock.png"
+      image: "/KP Traditional Dindigul Box Lock.png"
     },
     {
       id: "sada-square-iron",
@@ -102,7 +102,7 @@ export default function LocksShowcase() {
       icon: Lock,
       keyType: "Extra-long 6-inch Heavy Gauge Lever Key",
       historicalNote: "Initially constructed to secure royal storehouses and grain reserves against monsoon weather and heavy impacts.",
-      image: "/public/KP Fortress Door Lock System.png"
+      image: "/KP Fortress Door Lock System.png"
     },
     {
       id: "bell-alarm-lock",
@@ -118,7 +118,7 @@ export default function LocksShowcase() {
       icon: ShieldAlert,
       keyType: "Bespoke Dual-Pin Axial Key",
       historicalNote: "A 19th-century luxury design rediscovered in modern estate safety restorations.",
-      image: "/public/KP Secure Cash Safe Locker.png"
+      image: "/KP Secure Cash Safe Locker.png"
     },
     {
       id: "smart-brass-mortise",
@@ -134,7 +134,7 @@ export default function LocksShowcase() {
       icon: Settings,
       keyType: "Symmetric Triple-Channel Dimple Key",
       historicalNote: "Specially designed for luxury heritage resorts and high-end residential doors.",
-      image: "/public/KP Classic Iron Padlock.png"
+      image: "/KP Classic Iron Padlock.png"
     }
   ];
 
