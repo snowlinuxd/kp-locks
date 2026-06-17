@@ -204,17 +204,20 @@ export default function LocksShowcase() {
                     exit={{ opacity: 0, scale: 0.95 }}
                     whileHover={{ 
                       y: -12, 
-                      scale: 1.035, 
+                      scale: 1.035,
+                      rotateY: 8,
                       boxShadow: "0 25px 50px -12px rgba(82, 57, 39, 0.65), 0 0 25px rgba(212, 175, 55, 0.15)",
                     }}
                     transition={{ 
                       layout: { type: "spring", stiffness: 300, damping: 25 },
                       scale: { type: "spring", stiffness: 300, damping: 20 },
                       y: { type: "spring", stiffness: 300, damping: 20 },
+                      rotateY: { type: "spring", stiffness: 300, damping: 20 },
                       duration: 0.35,
                       delay: idx * 0.05
                     }}
                     className="relative p-6 rounded bg-neutral-950 border border-zinc-850 hover:border-[#D4AF37]/50 shadow-xl overflow-hidden cursor-pointer flex flex-col justify-between group"
+                    style={{ transformStyle: "preserve-3d", perspective: "1000px" }}
                   >
                     {/* Decorative faint glow */}
                     <div className="absolute inset-0 bg-gradient-to-tr from-[#D4AF37]/2 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
@@ -288,32 +291,7 @@ export default function LocksShowcase() {
           </div>
         </div>
 
-        {/* Dynamic CTA Banner */}
-        <div className="mt-16 p-8 sm:p-12 rounded bg-neutral-950 border border-zinc-800/85 flex flex-col lg:flex-row items-center justify-between gap-8 relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-full bg-radial-gradient from-transparent to-black/60 pointer-events-none" />
-          <div className="relative z-10 max-w-2xl text-left">
-            <h3 className="font-serif text-2xl lg:text-3xl font-medium text-white mb-3">
-              Need a Custom Fitted Blueprint or Multi-Key Suite?
-            </h3>
-            <p className="text-zinc-400 text-sm">
-              We frequently forge custom locks built to your architectural parameters, heavy-duty farm warehouse thresholds, or matching lock systems. Contact us natively for personal consulting.
-            </p>
-          </div>
-          <div className="relative z-10 flex flex-col sm:flex-row gap-4 shrink-0 w-full lg:w-auto">
-            <a 
-              href={`tel:${CONTACT_NUMBERS[0].phone}`}
-              className="flex-1 lg:flex-none text-center px-6 py-4 rounded text-xs font-mono font-extrabold tracking-wider uppercase bg-[#D4AF37] hover:bg-[#b58920] text-black transition-all"
-            >
-              Consult Lock Master
-            </a>
-            <a 
-              href="#contact"
-              className="flex-1 lg:flex-none text-center px-6 py-4 rounded text-xs font-mono font-bold tracking-wider uppercase border border-zinc-700 hover:border-zinc-500 text-white hover:bg-zinc-800/30 transition-all"
-            >
-              Send Secure Inquiry
-            </a>
-          </div>
-        </div>
+
       </div>
 
       {/* TECHNICAL OVERLAY MODAL */}

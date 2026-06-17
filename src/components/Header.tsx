@@ -50,8 +50,8 @@ export default function Header() {
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
           scrolled 
-            ? 'bg-black/95 backdrop-blur-md border-b border-zinc-800/80 shadow-lg py-3' 
-            : 'bg-transparent py-5'
+            ? 'bg-black/95 backdrop-blur-md border-b border-zinc-800/80 shadow-lg pt-3 pb-2 sm:pt-6 sm:pb-3' 
+            : 'bg-transparent pt-3 pb-2 sm:pt-8 sm:pb-5'
         }`}
         id="app-header"
       >
@@ -59,11 +59,11 @@ export default function Header() {
           <div className="flex items-center justify-between">
             {/* Brand Logo Wrapper */}
             <a href="#" className="flex items-center gap-3.5 group focus:outline-none" onClick={(e) => handleScrollToSection(e, '#app-root')}>
-              <div className="h-12 flex items-center justify-center scale-90 origin-left mt-1">
+              <div className="h-10 sm:h-12 flex items-center justify-center scale-60 sm:scale-75 origin-left mt-1">
                 <Logo light={true} className="scale-90" />
               </div>
               <div className="flex flex-col select-none">
-                <span className="font-sans font-extrabold text-2xl sm:text-3xl tracking-wider text-white">
+                <span className="font-sans font-extrabold text-base sm:text-lg lg:text-xl tracking-wider text-white">
                   KP <span className="text-[#D4AF37]">LOCKS</span>
                 </span>
               </div>

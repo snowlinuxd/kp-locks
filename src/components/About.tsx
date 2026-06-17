@@ -92,7 +92,7 @@ export default function About() {
                 damping: 24,
                 mass: 0.7
               }}
-              className="relative w-full max-w-[420px] p-6 sm:p-8 rounded-xl bg-neutral-950 border border-zinc-800 shadow-2xl flex flex-col items-center cursor-default select-none group"
+              className="relative w-full max-w-[420px] p-4 sm:p-6 lg:p-8 rounded-xl bg-neutral-950 border border-zinc-800 shadow-2xl flex flex-col items-center cursor-default select-none group"
               style={{ transformStyle: "preserve-3d", perspective: "1000px" }}
               onMouseMove={handleMouseMove}
               onMouseLeave={handleMouseLeave}
@@ -100,22 +100,22 @@ export default function About() {
               {/* Gold header accent line */}
               <div className="absolute top-0 left-12 right-12 h-[2px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent"></div>
               
-              <div className="w-full text-center mb-5 relative">
+              <div className="w-full text-center mb-3 sm:mb-5 relative">
                 {/* Micro tech label */}
-                <div className="absolute -top-1 -left-2 text-[8px] font-mono text-zinc-600 tracking-wider">
+                <div className="absolute -top-1 -left-2 text-[7px] sm:text-[8px] font-mono text-zinc-600 tracking-wider">
                   SPEC_REV: 8.12
                 </div>
-                <span className="text-[10px] font-mono text-[#D4AF37] tracking-[0.25em] uppercase font-bold bg-[#D4AF37]/5 px-2.5 py-0.5 rounded border border-[#D4AF37]/15">
+                <span className="text-[9px] sm:text-[10px] font-mono text-[#D4AF37] tracking-[0.25em] uppercase font-bold bg-[#D4AF37]/5 px-2.5 py-0.5 rounded border border-[#D4AF37]/15">
                   DINDIGUL BLUEPRINT
                 </span>
-                <h3 className="font-serif text-xl font-medium text-white mt-2.5">Artisanal Lock Layout</h3>
-                <p className="text-[11px] text-zinc-500 font-mono mt-0.5 max-w-[280px] mx-auto">
+                <h3 className="font-serif text-base sm:text-xl font-medium text-white mt-2">Artisanal Lock Layout</h3>
+                <p className="text-[10px] sm:text-[11px] text-zinc-500 font-mono mt-0.5 max-w-[280px] mx-auto">
                   Interactive schematic of alignment tolerances. Click keyhole layout to engage.
                 </p>
               </div>
 
               {/* Simulated Tech Blueprint Canvas Area */}
-              <div className="relative w-full h-[280px] flex items-center justify-center mb-5 bg-black rounded-lg border border-zinc-800/80 p-3 overflow-hidden shadow-inner">
+              <div className="relative w-full h-40 sm:h-64 flex items-center justify-center mb-3 sm:mb-5 bg-black rounded-lg border border-zinc-800/80 p-3 overflow-hidden shadow-inner">
                 {/* Gridlines overlay background */}
                 <div className="absolute inset-0 bg-[radial-gradient(rgba(212,175,55,0.02)_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
                 
@@ -142,7 +142,7 @@ export default function About() {
                 </div>
 
                 {/* Master Lock SVG */}
-                <svg className="w-[190px] h-[190px] select-none z-10 relative cursor-pointer" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={triggerUnlockCycle}>
+                <svg className="w-32 sm:w-[190px] h-32 sm:h-[190px] select-none z-10 relative cursor-pointer" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={triggerUnlockCycle}>
                   {/* Outer security scale ring */}
                   <circle cx="100" cy="115" r="88" stroke="rgba(212,175,55,0.03)" strokeWidth="1" />
                   <circle cx="100" cy="115" r="82" stroke="rgba(212,175,55,0.06)" strokeWidth="1.5" strokeDasharray="3 7" />
@@ -343,23 +343,6 @@ export default function About() {
                   )}
                 </button>
               </div>
-
-              {/* Advanced specs table */}
-              <div className="w-full space-y-2 pt-4 border-t border-zinc-900 flex-grow">
-                <div className="flex justify-between items-center text-[10px] font-mono text-zinc-500 pb-1 mb-1 border-b border-zinc-900">
-                  <span>METROLOGICAL PROPERTY</span>
-                  <span>RECORDED TOLERANCE</span>
-                </div>
-                {specHighlights.map((spec, i) => (
-                  <div key={i} className="flex justify-between items-center text-xs group/item hover:bg-zinc-900/35 px-1 rounded py-0.5 transition-colors">
-                    <span className="text-zinc-500 font-mono text-[10px] flex items-center gap-1.5">
-                      <span className="w-1 h-1 rounded-full bg-[#D4AF37]/45 group-hover/item:bg-[#D4AF37]" />
-                      {spec.label}
-                    </span>
-                    <span className="text-zinc-300 font-medium font-serif">{spec.value}</span>
-                  </div>
-                ))}
-              </div>
             </motion.div>
           </div>
 
@@ -376,9 +359,7 @@ export default function About() {
 
             {/* Explanatory introduction */}
             <p className="mt-6 text-zinc-800 text-sm sm:text-base leading-relaxed">
-              Dindigul has been famous across India for centuries for one singular thing: unpickable, heavy-duty handmade locks. 
-              At <strong className="text-black">KP LOCKS</strong>, we keep this prestigious metal art alive. We make traditional solid locks 
-              using precise methods passed down through families, offering strength that modern mass-production facilities simply cannot copy.
+              Dindigul has been famous for centuries for handmade locks. At <strong className="text-black">KP LOCKS</strong>, we keep this metal art alive with traditional solid locks using precise methods passed down through families.
             </p>
 
             {/* Interactive tab triggers */}

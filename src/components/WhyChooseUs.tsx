@@ -113,47 +113,6 @@ export default function WhyChooseUs() {
           })}
         </div>
 
-        {/* Beautiful full-width interactive stat feature banner */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.98 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7 }}
-          className="mt-16 p-8 sm:p-12 rounded bg-neutral-950 border border-zinc-850 flex flex-col lg:flex-row items-center gap-10"
-        >
-          {/* Centered dial rating */}
-          <div className="relative w-40 h-40 flex-shrink-0 flex items-center justify-center">
-            {/* SVG dial border */}
-            <svg className="absolute inset-0 w-full h-full transform -rotate-90">
-              <circle cx="80" cy="80" r="70" stroke="rgba(255,255,255,0.03)" strokeWidth="8" fill="none" />
-              <motion.circle 
-                cx="80" 
-                cy="80" 
-                r="70" 
-                stroke="#D4AF37" 
-                strokeWidth="8" 
-                fill="none" 
-                strokeDasharray="440" 
-                initial={{ strokeDashoffset: 440 }}
-                whileInView={{ strokeDashoffset: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1.5, ease: 'easeOut' }}
-              />
-            </svg>
-            <div className="text-center">
-              <span className="text-3xl font-serif text-white font-extrabold block">100%</span>
-              <span className="text-[9px] font-mono tracking-widest text-[#D4AF37] uppercase">Solid alloy</span>
-            </div>
-          </div>
-
-          <div className="flex-grow">
-            <span className="text-xs font-mono font-bold text-[#D4AF37] tracking-widest uppercase">THE DINDIGUL BARRIER</span>
-            <h3 className="font-serif text-2xl sm:text-3xl font-semibold text-white mt-2">Pick-Resistant Mechanical Tumbler Design</h3>
-            <p className="text-stone-400 text-sm mt-3 leading-relaxed">
-              Standard pin-tumbler locks rely on linear alignment lines which can be bypass-manipulated using generic lock pick rakes or picking keys. Our traditional Dindigul lever alignments are asymmetrical and cut out of hardened steel, triggering an auto-deadlock mechanism whenever a pick-tool attempts force.
-            </p>
-          </div>
-        </motion.div>
-
       </div>
     </section>
   );

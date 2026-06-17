@@ -84,21 +84,6 @@ export default function ManufacturingProcess() {
           })}
         </div>
 
-        {/* Dynamic craftsmanship quote banner footer */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-16 text-center"
-        >
-          <div className="inline-flex items-center gap-2.5 max-w-xl mx-auto px-4 py-3 rounded bg-zinc-950/90 border border-zinc-900 shadow-inner">
-            <Flame className="w-4 h-4 text-[#D4AF37] animate-bounce" />
-            <p className="text-[11px] sm:text-xs font-mono text-zinc-400 tracking-wide text-left">
-              <strong className="text-white">Did you know?</strong> Traditional Dindigul levers are hand-filed to a tolerance of less than 0.1mm. It takes approximately 14 hours of manual labour to complete a single Mango lock mechanism.
-            </p>
-          </div>
-        </motion.div>
-
       </div>
     </section>
   );

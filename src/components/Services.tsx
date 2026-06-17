@@ -148,32 +148,6 @@ export default function Services() {
           })}
         </div>
 
-        {/* 24/7 Global Banner */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          className="mt-16 p-6 sm:p-8 rounded bg-gradient-to-r from-zinc-950 via-[#121215] to-[#1a1408] border border-[#D4AF37]/20 flex flex-col md:flex-row items-center justify-between gap-6"
-        >
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full bg-[#D4AF37]/10 flex items-center justify-center border border-[#D4AF37]/20">
-              <CalendarClock className="w-5 h-5 text-[#D4AF37] animate-pulse" />
-            </div>
-            <div>
-              <h4 className="font-serif text-lg font-medium text-white">Emergency Door Lock Opening &amp; Services</h4>
-              <p className="text-xs sm:text-sm text-stone-400 mt-1">Struggling with a lost key? Our professional team operates 24/7 anywhere around Dindigul.</p>
-            </div>
-          </div>
-          
-          <a
-            href={`tel:${CONTACT_NUMBERS[1].phone}`}
-            className="px-6 py-3 rounded text-xs font-mono tracking-widest uppercase font-extrabold text-black bg-[#D4AF37] hover:bg-[#b08e24] shadow-lg transition-transform duration-200 active:scale-95 shrink-0"
-            id="emergency-247-btn"
-          >
-            Emergency call: {CONTACT_NUMBERS[1].phone}
-          </a>
-        </motion.div>
-
       </div>
     </section>
   );

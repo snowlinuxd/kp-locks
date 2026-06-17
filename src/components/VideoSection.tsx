@@ -175,7 +175,7 @@ export default function VideoSection() {
 
   return (
     <section 
-      className="bg-black py-28 border-t border-zinc-900/60 w-full relative overflow-hidden select-none"
+      className="bg-black py-16 border-t border-zinc-900/60 w-full relative overflow-hidden select-none"
       id="showcase"
     >
       {/* 1. Background Video */}
@@ -208,7 +208,7 @@ export default function VideoSection() {
       <div className="max-w-8xl mx-auto px-6 sm:px-12 lg:px-16 relative z-20">
         
         {/* Main interactive chassis block */}
-        <div className="relative rounded overflow-hidden bg-zinc-950/40 border border-zinc-800 shadow-2xl p-8 sm:p-14 lg:p-20 text-center flex flex-col items-center justify-center min-h-[480px]">
+        <div className="relative rounded overflow-hidden bg-zinc-950/40 border border-zinc-800 shadow-2xl p-6 sm:p-10 lg:p-14 text-center flex flex-col items-center justify-center min-h-[300px]">
           
           {/* Spark canvas element */}
           <SparkCanvas triggerBurst={burstCounter} />

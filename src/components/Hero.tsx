@@ -148,7 +148,7 @@ export default function Hero() {
       <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-30 flex items-center gap-4 bg-black/75 border border-zinc-800/80 px-6 py-3.5 rounded-full backdrop-blur-md shadow-2xl">
         <button
           onClick={togglePlay}
-          className="flex items-center justify-center p-2 rounded-full text-zinc-300 hover:text-[#D4AF37] hover:bg-zinc-800/55 transition-all cursor-pointer"
+          className="hidden md:flex items-center justify-center p-2 rounded-full text-zinc-300 hover:text-[#D4AF37] hover:bg-zinc-800/55 transition-all cursor-pointer"
           title={isPlaying ? "Pause Video" : "Play Video"}
         >
           {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5 fill-[#D4AF37]/10" />}
@@ -158,7 +158,7 @@ export default function Hero() {
 
         <button
           onClick={toggleMute}
-          className="flex items-center gap-2.5 px-3 py-1.5 rounded-full text-[#D4AF37] hover:text-white hover:bg-zinc-800/55 transition-all cursor-pointer text-xs font-mono font-bold uppercase tracking-widest"
+          className="hidden md:flex items-center gap-2.5 px-3 py-1.5 rounded-full text-[#D4AF37] hover:text-white hover:bg-zinc-800/55 transition-all cursor-pointer text-xs font-mono font-bold uppercase tracking-widest"
           title={isMuted ? "Unmute Sound" : "Mute Sound"}
         >
           {isMuted ? (
@@ -178,7 +178,7 @@ export default function Hero() {
 
         <button
           onClick={handleRestart}
-          className="flex items-center justify-center p-2 rounded-full text-zinc-300 hover:text-[#D4AF37] hover:bg-zinc-800/55 transition-all cursor-pointer"
+          className="hidden md:flex items-center justify-center p-2 rounded-full text-zinc-300 hover:text-[#D4AF37] hover:bg-zinc-800/55 transition-all cursor-pointer"
           title="Restart Video from Beginning"
         >
           <RefreshCw className="w-4 h-4" />

@@ -4,6 +4,7 @@
  */
 
 import React from 'react';
+import { motion } from 'motion/react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -42,6 +43,20 @@ export default function App() {
 
         {/* 7. Showcasing Tradition & Security */}
         <VideoSection />
+
+        {/* Animated Separator Stripe */}
+        <div className="w-full h-1 bg-white overflow-hidden relative">
+          <motion.div
+            initial={{ x: '-100%' }}
+            animate={{ x: '100%' }}
+            transition={{ 
+              duration: 3, 
+              repeat: Infinity,
+              ease: 'linear'
+            }}
+            className="absolute inset-0 w-1/3 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent"
+          />
+        </div>
 
         {/* 8. Secured Inquiry & Map Hub */}
         <ContactSection />
