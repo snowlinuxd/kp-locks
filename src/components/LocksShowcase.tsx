@@ -43,7 +43,7 @@ export default function LocksShowcase() {
     {
       id: "manga-double",
       name: "KP Premium Brass Aldrop Lock",
-      category: "Door Security Hardware",
+      category: "traditional",
       rating: "9.9/10",
       weight: "1.8 kg",
       level: 10,
@@ -59,7 +59,7 @@ export default function LocksShowcase() {
     {
       id: "shackle-fortress",
       name: "KP Stainless Steel Mortise Lock",
-      category: "Mortise Lock",
+      category: "traditional",
       rating: "10/10",
       weight: "2.2 kg",
       level: 10,
@@ -75,7 +75,7 @@ export default function LocksShowcase() {
     {
       id: "decoy-puzzle",
       name: "KP Traditional Dindigul Box Lock",
-      category: "Traditional Heritage Lock",
+      category: "traditional",
       rating: "9.5/10",
       weight: "3.5 kg",
       level: 9,
@@ -91,7 +91,7 @@ export default function LocksShowcase() {
     {
       id: "sada-square-iron",
       name: "KP Fortress Door Lock System",
-      category: "Heavy Security Lock",
+      category: "heavy-duty",
       rating: "9.7/10",
       weight: "5.0 kg",
       level: 9,
@@ -107,7 +107,7 @@ export default function LocksShowcase() {
     {
       id: "bell-alarm-lock",
       name: "KP Secure Cash Safe Locker",
-      category: "Safe Locker",
+      category: "bespoke",
       rating: "9.6/10",
       weight: "18kg",
       level: 9,
@@ -123,7 +123,7 @@ export default function LocksShowcase() {
     {
       id: "smart-brass-mortise",
       name: "KP Classic Iron Padlock",
-      category: "Padlock",
+      category: "traditional",
       rating: "9.8/10",
       weight: "1.2 kg",
       level: 10,
